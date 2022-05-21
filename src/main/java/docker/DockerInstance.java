@@ -11,7 +11,8 @@ public class DockerInstance {
 
     private DockerClientConfig getDockerClientConfig() {
         return DefaultDockerClientConfig.createDefaultConfigBuilder()
-                .withDockerHost("tcp://localhost:2375")
+//                .withDockerHost("tcp://localhost:2375")
+                .withDockerHost("unix:///var/run/docker.sock")
                 .build();
     }
 
